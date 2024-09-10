@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto</title>
+    <link rel="stylesheet" href="estilos/detalle_1.css">
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html">Stay in Style</a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="iniciar_sesion.html">Iniciar Sesión</a></li>
+            <li><a href="registrarse.html">Registrarse</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li>
+                <a href="#">Categorías</a>
+                <ul>
+                  <li><a  class="color" href="hombres.html">Hombre</a></li><br>
+                  <li><a class="color" href="mujeres.html">Mujer</a></li>
+                </ul>
+            </li>
+            
+            
+          </ul>
+        </nav>
+    </header>
+   
+    
+    <div class="producto-detalle-container">
+        <div class="producto-detalle">
+            <div class="producto-imagen">
+                <img id="imagenProducto" src="imagenes/chaqueta_ovejera_blanca.jpeg" alt="Imagen del producto" onclick="activarZoom(event)">
+                <div id="zoomLupa" class="zoom-lupa"></div>
+            </div>
+            <div class="producto-informacion">
+                <h1>Chaqueta Ovejera Blanca</h1>
+                <p class="precio">$ 105.000 COP</p>
+                <form id="form-detalles-producto">
+                    <div class="seleccion-talla">
+                        <label>Elige tu talla:</label>
+                        <div class="tallas">
+                            <button type="button" class="talla" data-talla="XS">XS</button>
+                            <button type="button" class="talla" data-talla="S">S</button>
+                            <button type="button" class="talla" data-talla="M">M</button>
+                            <button type="button" class="talla" data-talla="L">L</button>
+                            <button type="button" class="talla" data-talla="XL">XL</button>
+                        </div>
+                        <input type="hidden" id="talla" name="talla" value="">
+                    </div>
+                    <div class="seleccion-cantidad">
+                        <label>Cantidad:</label>
+                        <div class="cantidad-control">
+                            <input type="text" id="cantidad" name="cantidad" value="1" readonly>
+                            <button type="button" id="incrementar">+</button>
+                        </div>
+                    </div>
+                    <button type="submit" class="boton-carrito">Añadir a la cesta</button>
+                </form>
+                <h5>DESCRIPCIÓN</h5>
+                <p>Chaqueta de corte clásico con cuello de pana en contraste, ideal para un estilo casual y atemporal.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tallaButtons = document.querySelectorAll('.talla');
+        const tallaInput = document.getElementById('talla');
+        const cantidadInput = document.getElementById('cantidad');
+        let cantidad = 1;
+
+        tallaButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tallaButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                tallaInput.value = button.dataset.talla;
+            });
+        });
+
+        document.getElementById('incrementar').addEventListener('click', () => {
+            cantidad++;
+            cantidadInput.value = cantidad;
+        });
+
+        function activarZoom(event) {
+            const zoomLupa = document.getElementById('zoomLupa');
+            const img = document.getElementById('imagenProducto');
+            const posX = event.offsetX ? event.offsetX : event.touches[0].pageX;
+            const posY = event.offsetY ? event.offsetY : event.touches[0].pageY;
+            const imgWidth = img.width;
+            const imgHeight = img.height;
+            const xPerc = (posX / imgWidth) * 100;
+            const yPerc = (posY / imgHeight) * 100;
+
+            zoomLupa.style.display = 'block';
+            zoomLupa.style.left = `${posX - 50}px`;
+            zoomLupa.style.top = `${posY - 50}px`;
+            zoomLupa.style.backgroundImage = `url('${img.src}')`;
+            zoomLupa.style.backgroundSize = `${imgWidth * 2}px ${imgHeight * 2}px`;
+            zoomLupa.style.backgroundPosition = `${xPerc}% ${yPerc}%`;
+
+            img.addEventListener('mousemove', moverLupa);
+            img.addEventListener('mouseleave', desactivarZoom);
+        }
+
+        function moverLupa(event) {
+            const zoomLupa = document.getElementById('zoomLupa');
+            const img = document.getElementById('imagenProducto');
+            const posX = event.offsetX ? event.offsetX : event.touches[0].pageX;
+            const posY = event.offsetY ? event.offsetY : event.touches[0].pageY;
+            const imgWidth = img.width;
+            const imgHeight = img.height;
+            const xPerc = (posX / imgWidth) * 100;
+            const yPerc = (posY / imgHeight) * 100;
+
+            zoomLupa.style.left = `${posX - 50}px`;
+            zoomLupa.style.top = `${posY - 50}px`;
+            zoomLupa.style.backgroundPosition = `${xPerc}% ${yPerc}%`;
+        }
+
+        function desactivarZoom() {
+            const zoomLupa = document.getElementById('zoomLupa');
+            zoomLupa.style.display = 'none';
+        }
+    </script>
+    
+    <script src="java/scripts/carrito.js"></script>
+</body>
+</html>

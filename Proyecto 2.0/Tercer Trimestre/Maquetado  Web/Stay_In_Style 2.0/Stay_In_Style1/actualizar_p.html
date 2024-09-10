@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Producto</title>
+    <link rel="stylesheet" href="estilos/estilosformularios.css">
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html">Stay in Style</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="gestion_stock.html">Gestión de Stock</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2>Actualizar Producto</h2>
+        <form action="" method="POST" enctype="multipart/form-data">
+            <label for="imagen">Actualizar Imagen</label>
+            <input type="file" id="imagen" name="imagen" required>
+
+            <label for="nombre">Actualizar Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Actualiza el nombre" required>
+
+            <label for="descripcion">Actualizar Descripción</label>
+            <textarea id="descripcion" name="descripcion" placeholder="Actualiza la descripción" required></textarea>
+
+            <label for="precio">Actualizar Precio</label>
+            <input type="number" id="precio" name="precio" placeholder="Actualiza el precio" required>
+
+            <button type="submit">Actualizar</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Stay in Style</p>
+    </footer>
+</body>
+</html>

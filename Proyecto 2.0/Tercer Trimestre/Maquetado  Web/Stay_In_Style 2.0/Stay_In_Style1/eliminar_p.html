@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Producto</title>
+    <link rel="stylesheet" href="estilos/estilosformularios.css">
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html">Stay in Style</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="gestion_stock.html">Gestión de Stock</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2>Eliminar Producto</h2>
+        <form action="" method="POST">
+            <label for="nombre">Nombre de la Prenda</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa el nombre de la prenda" required>
+
+            <label for="categoria">Categoría</label>
+             <select id="categoria" name="categoria" class="categoria">
+               <option value="hombre">Hombre</option>
+               <option value="mujer">Mujer</option>
+             </select>
+            <button type="submit">Eliminar</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Stay in Style</p>
+    </footer>
+</body>
+</html>

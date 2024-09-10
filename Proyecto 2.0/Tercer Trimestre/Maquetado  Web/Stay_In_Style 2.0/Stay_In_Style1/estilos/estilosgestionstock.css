@@ -1,0 +1,132 @@
+/* Estilos generales */
+body {
+    background-color: #E5E1DA; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Fuente de texto */
+}
+
+/* Header */
+header {
+    background-color: #000000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Ajustado a 10px para mayor consistencia con gestión de stock */
+    margin: 0;
+}
+
+/* Logo */
+.logo{
+    color: white; 
+    text-decoration: none;
+    font-size: 40px; /* Mantener consistente con el index */
+}
+
+/* Lista */
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0; /* Asegúrate de eliminar márgenes como en index */
+}
+
+nav ul li {
+    margin: 0 10px; /* Ajusta para mantener la consistencia */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px; /* Mantén la misma fuente del index */
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #605f5f;
+    border-radius: 5px;
+}
+
+/* Contenido Principal (Gestión de Stock) */
+.gestion-container {
+    background-color: #fff;
+    padding: 2rem; /* Ajustado para mayor coherencia con el padding del index */
+    border-radius: 8px; /* Mantén el borde redondeado consistente */
+    border: 1px solid #ddd; /* Borde más ligero como el de productos */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Ajustado para ser más consistente */
+    max-width: 600px; /* Agrega un max-width para mejor visualización en pantallas grandes */
+    margin: 20px auto; /* Centra el contenedor */
+}
+
+/* Botones de Gestión */
+.gestion-opciones button {
+    padding: 10px 20px; /* Ajusta para consistencia con el padding en otros botones */
+    font-size: 16px; /* Tamaño de fuente similar al de la barra de búsqueda */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #007bff; /* Igual al color del botón de búsqueda en index */
+    color: white;
+    width: 100%;
+    margin: 10px 0; /* Margen similar al de otros botones */
+}
+
+.gestion-opciones button:hover {
+    background-color: #0056b3; /* Consistencia en el color del hover */
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries para hacer responsive el diseño */
+
+/* Responsividad para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .gestion-container {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .gestion-opciones button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Responsividad para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .gestion-container {
+        width: 80%;
+        padding: 1.5rem;
+    }
+
+    .gestion-opciones button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}

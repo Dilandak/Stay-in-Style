@@ -1,0 +1,253 @@
+body {
+    background-color: #E5E1DA;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+header {
+    background-color: #000000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 0px;
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    color: white; 
+    text-decoration: none;
+    font-size: 40px;
+}
+
+/* Lista */
+nav {
+    padding: 30px;
+    margin: 0px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Hace que el menú sea responsive */
+}
+
+nav ul li {
+    margin: 0 5px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 30px; 
+    transition: all 0.3s ease-in-out;
+    font-size: 20px; 
+}
+
+nav ul li a:hover {
+    background-color: #605f5f;
+    border-radius: 5px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 148%;
+    left: 10%;
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    background-color: #333; /* Fondo del menú desplegable */
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 8px 15px; /* Ajusta el padding para hacer el hover más pequeño */
+    font-size: 18px;
+    margin: 5px 0; /* Añade espacio entre las opciones */
+}
+
+/* Contenedor principal del formulario de pago */
+.pago-container {
+    margin: 50px auto;
+    padding: 20px;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* FOOTER */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #007bff;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media li {
+    list-style: none;
+}
+
+.social-media li a img {
+    width: 35px;
+    height: 35px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+main {
+    padding: 2rem;
+}
+
+#quienes-somos {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#quienes-somos h2 {
+    color: #333;
+}
+
+#quienes-somos p {
+    color: #666;
+}
+
+/* Media Queries para Responsiveness */
+
+/* Estilos para dispositivos con un ancho máximo de 768px */
+@media (max-width: 768px) {
+    .pago-container {
+        width: 80%;
+        padding: 30px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+/* Estilos para dispositivos con un ancho máximo de 480px */
+@media (max-width: 480px) {
+    .pago-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+
+    .footer-section {
+        flex: 100%;
+        margin: 10px 0;
+    }
+
+    .footer-bottom {
+        font-size: 14px;
+    }
+}

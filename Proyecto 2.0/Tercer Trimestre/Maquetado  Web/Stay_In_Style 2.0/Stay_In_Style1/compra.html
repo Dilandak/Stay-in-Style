@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Envío - Stay in Style</title>
+    <link rel="stylesheet" href="estilos/estiloscompra.css">
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html">Stay in Style</a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="iniciar_sesion.html">Iniciar Sesión</a></li>
+            <li><a href="registrarse.html">Registrarse</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li>
+                <a href="#">Categorías</a>
+                <ul>
+                  <li><a  class="color" href="hombres.html">Hombre</a></li><br>
+                  <li><a class="color" href="mujeres.html">Mujer</a></li>
+                </ul>
+            </li>
+            
+            
+          </ul>
+        </nav>
+    </header>
+    <div class="envio-container">
+        <h2>Información de Envío</h2>
+        <form id="envio-form">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Ingrese su nombre"  maxlength="30" pattern="{a...z}" 
+                title="Ingresa su nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" placeholder="Ingrese su Apellido"  maxlength="30" pattern="{a...z}" 
+                title="Ingresa su Apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="Ingresa su correo" maxlength="30" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+                title="Ingresa su correo electrónico (ejemplo@dominio.org,.com,.mil.edu)" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Número de celular</label>
+                <input type="text" id="telefono" name="telefono" maxlength="10" placeholder="Ingreses su número de celular" pattern="[0-9]*" title="Ingresa su número de celular (solo números)" 
+                title="Ingresa su número de celular (3158897451)"  required>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Ingresa su dirección" maxlength="50" pattern="[a-zA-Z0-9\s,.-#]+" 
+                title="Ingresa su dirección (Ejemplo: Calle 123b sur #2a98)" required>
+            </div>
+            <div class="form-group">
+                <label for="codigo-postal">Código Postal:</label>
+                <input type="text" id="codigo-postal" title="Ingrese su codigo postal"placeholder="Ingresa su codigo postal" maxlength="6" pattern="[0-9]*" required>
+            </div>
+            <div class="form-group">
+                <label for="localidad">localidad:</label>
+                <select id="localidad" name="localidad" class="localidad">
+                    <option value="Antonio Nariño">Antonio Nariño</option>
+                    <option value="Barrios Unidos">Barrios Unidos</option>
+                    <option value="Bosa">Bosa</option>
+                    <option value="Capitolio">Capitolio</option>
+                    <option value="Chapinero">Chapinero</option>
+                    <option value="Ciudad Bolívar">Ciudad Bolívar</option>
+                    <option value="Engativá">Engativá</option>
+                    <option value="Fontibón">Fontibón</option>
+                    <option value="Kennedy">Kennedy</option>
+                    <option value="La Candelaria">La Candelaria</option>
+                    <option value="Los Mártires">Los Mártires</option>
+                    <option value="Puente Aranda">Puente Aranda</option>
+                    <option value="Rafael Uribe Uribe">Rafael Uribe Uribe</option>
+                    <option value="San Cristóbal">San Cristóbal</option>
+                    <option value="San Fernando">San Fernando</option>
+                    <option value="Santa Fé">Santa Fé</option>
+                    <option value="Santa Lucía">Santa Lucía</option>
+                    <option value="Teusaquillo">Teusaquillo</option>
+                    <option value="Usaquén">Usaquén</option>
+                    <option value="Usme">Usme</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="barrio">barrio:</label>
+                <select id="barrio" name="barrio"class="barrio">
+                    <option value="aguas_claras">Aguas Claras</option>
+            <option value="alamos_norte">Alamos Norte</option>
+            <option value="alamos_sur">Alamos Sur</option>
+            <option value="altos_estancia">Altos de la Estancia</option>
+            <option value="banderas">Banderas</option>
+            <option value="barrios_unidos">Barrios Unidos</option>
+            <option value="bellavista">Bellavista</option>
+            <option value="bella_vista">Bella Vista</option>
+            <option value="bosque_cedros">Bosque de los Cedros</option>
+            <option value="bosque_niza">Bosque de Niza</option>
+            <option value="bosa_centro">Bosa Centro</option>
+            <option value="bosa_libertad">Bosa La Libertad</option>
+            <option value="bosa_san_bernardino">Bosa San Bernardino</option>
+            <option value="bosa_san_luis">Bosa San Luis</option>
+            <option value="bosa_piamonte">Bosa Piamonte</option>
+            <option value="candelaria_nueva">Candelaria La Nueva</option>
+            <option value="carvajal">Carvajal</option>
+            <option value="cerro_norte">Cerro Norte</option>
+            <option value="chapinero_alto">Chapinero Alto</option>
+            <option value="chapinero_bajo">Chapinero Bajo</option>
+            <option value="ciudad_bolivar">Ciudad Bolívar</option>
+            <option value="colina_campestre">Colina Campestre</option>
+            <option value="el_chico">El Chicó</option>
+            <option value="el_nogal">El Nogal</option>
+            <option value="el_restrepo">El Restrepo</option>
+            <option value="fontibon">Fontibón</option>
+            <option value="ginza">Ginza</option>
+            <option value="granada">Granada</option>
+            <option value="horta">Horta</option>
+            <option value="la_candelaria">La Candelaria</option>
+            <option value="la_castellana">La Castellana</option>
+            <option value="la_esmeralda">La Esmeralda</option>
+            <option value="la_macarena">La Macarena</option>
+            <option value="la_merced">La Merced</option>
+            <option value="la_raza">La Raza</option>
+            <option value="las_aguas">Las Aguas</option>
+            <option value="las_ferias">Las Ferias</option>
+            <option value="las_delicias">Las Delicias</option>
+            <option value="las_lomas">Las Lomas</option>
+            <option value="los_alcazares">Los Alcázares</option>
+            <option value="los_martires">Los Mártires</option>
+            <option value="los_rosales">Los Rosales</option>
+            <option value="marsella">Marsella</option>
+            <option value="niza_norte">Niza Norte</option>
+            <option value="niza_sur">Niza Sur</option>
+            <option value="palermo">Palermo</option>
+            <option value="pardorubio">Pardo Rubio</option>
+            <option value="parque_93">Parque de la 93</option>
+            <option value="penalosa">Peñalosa</option>
+            <option value="quirigua">Quirigua</option>
+            <option value="rincon_chico">Rincón del Chicó</option>
+            <option value="san_cristobal_norte">San Cristóbal Norte</option>
+            <option value="san_cristobal_sur">San Cristóbal Sur</option>
+            <option value="san_fernando">San Fernando</option>
+            <option value="san_german">San Germán</option>
+            <option value="san_joaquin">San Joaquín</option>
+            <option value="san_luis">San Luis</option>
+            <option value="santa_bibiana">Santa Bibiana</option>
+            <option value="santa_isabel">Santa Isabel</option>
+            <option value="santa_lucia">Santa Lucía</option>
+            <option value="santa_maria">Santa María</option>
+            <option value="santa_rosa">Santa Rosa</option>
+            <option value="santa_sofia">Santa Sofía</option>
+            <option value="teusaquillo">Teusaquillo</option>
+            <option value="tunjuelito">Tunjuelito</option>
+            <option value="usaquen">Usaquén</option>
+            <option value="usme">Usme</option>
+            <option value="veedore">Veedores</option>
+            <option value="villas_granada">Villas de Granada</option>
+            <option value="villas_suba">Villas de Suba</option>
+                </select>
+            </div>
+            <button type="submit">Continuar</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h3>SOBRE NOSOTROS</h3>
+            <ul>
+                <li><a href="quienes_somos.html">¿Quiénes somos?</a></li>
+                <li><a href="Que_es_StayinStyle.html">¿Qué es Stay in Style?</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>NUESTRAS CATEGORÍAS</h3>
+            <ul>                    
+            <li><a href="hombres.html">Hombre</a></li>
+            <li><a href="mujeres.html">Mujeres</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>SÍGUENOS</h3>
+            <ul class="social-media">
+                <li><a href="https://www.facebook.com" target="_blank"><img src="imagenes/facebook.jpg" alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><img src="imagenes/instragram.jpg" alt="Instagram"></a></li>
+                <li><a href="https://www.tiktok.com" target="_blank"><img src="imagenes/tiktok.jpg" alt="Tiktok"></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Stay in Style</p>
+        </div>   <!-- Aquí el mismo pie de página que tienes en el carrito -->
+    </footer>
+
+    <script src="java/scripts/envio.js"></script>
+    <script>
+       document.getElementById('envio-form').addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    // Guardar datos del formulario en localStorage
+    const datosEnvio = {
+        nombre: document.getElementById('nombre').value,
+        apellidos: document.getElementById('apellidos').value,
+        email: document.getElementById('email').value,
+        telefono: document.getElementById('telefono').value,
+        direccion: document.getElementById('direccion').value,
+        codigoPostal: document.getElementById('codigo-postal').value,
+        departamento: document.getElementById('localidad').value,
+        municipio: document.getElementById('barrio').value
+    };
+    localStorage.setItem('datosEnvio', JSON.stringify(datosEnvio));
+
+    window.location.href = 'pago.html';  // Redirigir a pago.html
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen de Compra - Stay in Style</title>
+    <link rel="stylesheet" href="estilos/estilosresumen.css">
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html">Stay in Style</a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="iniciar_sesion.html">Iniciar Sesión</a></li>
+            <li><a href="registrarse.html">Registrarse</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li>
+                <a href="#">Categorías</a>
+                <ul>
+                  <li><a  class="color" href="hombres.html">Hombre</a></li><br>
+                  <li><a class="color" href="mujeres.html">Mujer</a></li>
+                </ul>
+            </li>
+            
+            
+          </ul>
+        </nav>
+    </header>
+   
+
+    <div class="resumen-container">
+        <h2>Gracias por tu compra</h2>
+        <p>Hemos recibido tu pedido. Aquí tienes un resumen:</p>
+
+        <div class="resumen-envio">
+            <h3>Datos de Envío</h3>
+            <p><strong>Nombre:</strong> <span id="resumen-nombre"></span></p>
+            <p><strong>Apellidos:</strong> <span id="resumen-apellidos"></span></p>
+            <p><strong>E-mail:</strong> <span id="resumen-email"></span></p>
+            <p><strong>Teléfono:</strong> <span id="resumen-telefono"></span></p>
+            <p><strong>Dirección:</strong> <span id="resumen-direccion"></span></p>
+            <p><strong>Código Postal:</strong> <span id="resumen-codigo-postal"></span></p>
+            <p><strong>Localidad:</strong> <span id="resumen-departamento"></span></p>
+            <p><strong>Barrio:</strong> <span id="resumen-municipio"></span></p>
+        </div>
+
+        <div class="resumen-pago">
+            <h3>Método de Pago</h3>
+            <p><strong>Método Seleccionado:</strong> <span id="resumen-metodo-pago"></span></p>
+        </div>
+
+        <button onclick="window.print()">Imprimir Recibo</button>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h3>SOBRE NOSOTROS</h3>
+            <ul>
+                <li><a href="quienes_somos.html">¿Quiénes somos?</a></li>
+                <li><a href="Que_es_StayinStyle.html">¿Qué es Stay in Style?</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>NUESTRAS CATEGORÍAS</h3>
+            <ul>                    
+            <li><a href="hombres.html">Hombre</a></li>
+            <li><a href="mujeres.html">Mujeres</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>SÍGUENOS</h3>
+            <ul class="social-media">
+                <li><a href="https://www.facebook.com" target="_blank"><img src="imagenes/facebook.jpg" alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><img src="imagenes/instragram.jpg" alt="Instagram"></a></li>
+                <li><a href="https://www.tiktok.com" target="_blank"><img src="imagenes/tiktok.jpg" alt="Tiktok"></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Stay in Style</p>
+        </div>  <!-- Aquí el mismo pie de página que tienes en el carrito -->
+    </footer>
+
+    <script src="java/scripts/resumen.js"></script>
+ 
+</body>
+</html>

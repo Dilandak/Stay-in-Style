@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="estilos/estilosformularios.css">
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html">Stay in Style</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="gestion_stock.html">Gestión de Stock</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2>Agregar Producto</h2>
+        <form action="" method="POST" enctype="multipart/form-data">
+            <label for="imagen">Imagen del Producto</label>
+            <input type="file" id="imagen" name="imagen" required>
+
+            <label for="nombre">Nombre del Producto</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa el nombre" required>
+
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" name="descripcion" placeholder="Describe el producto" required></textarea>
+
+            <label for="precio">Precio</label>
+            <input type="number" id="precio" name="precio" placeholder="Ingresa el precio" required>
+
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Stay in Style</p>
+    </footer>
+</body>
+</html>
